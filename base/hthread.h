@@ -15,7 +15,7 @@
 #define hv_gettid   (long)gettid
 #elif defined(OS_LINUX)
 #include <sys/syscall.h>
-#define hv_gettid() (long)syscall(SYS_gettid)
+#define hv_gettid() (long)pthread_self
 #elif defined(OS_DARWIN)
 static inline long hv_gettid() {
     uint64_t tid = 0;
