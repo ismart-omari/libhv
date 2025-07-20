@@ -21,6 +21,18 @@
 #endif
 #endif
 
+#ifdef list_add_tail
+#undef list_add_tail
+#endif
+
+#ifdef list_add_head
+#undef list_add_head
+#endif
+ 
+#ifdef list_is_singular
+#undef list_is_singular
+#endif
+	
 struct list_head {
 	struct list_head *next, *prev;
 };
